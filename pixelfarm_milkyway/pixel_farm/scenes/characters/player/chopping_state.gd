@@ -2,6 +2,11 @@ extends NodeState
 
 @export var player : Player
 @export var animated_sprite_2d: AnimatedSprite2D
+@export var hit_component_collision_shape: CollisionShape2D 
+
+func _ready() -> void: 
+	hit_component_collision_shape.disabled = true 
+	hit_component_collision_shape.position = Vector2(0, 0);
 
 func _on_process(_delta : float) -> void:
 	pass
@@ -19,19 +24,26 @@ func _on_next_transitions() -> void: # on next transition, check if animated spr
 func _on_enter() -> void: # only play the animation as you enter the state 
 	if player.player_direction == Vector2.UP: 
 		animated_sprite_2d.play("chopping_back")
+		hit_component_collision_shape.position = Vector2(2, -20)
 	elif player.player_direction == Vector2.RIGHT: 
 		animated_sprite_2d.play("chopping_right") 
+		hit_component_collision_shape.position = Vector2(9, 0)
 	elif player.player_direction == Vector2.LEFT: 
 		animated_sprite_2d.play("chopping_left")
+		hit_component_collision_shape.position = Vector2(-9, 0)
 	elif player.player_direction == Vector2.DOWN: 
 		animated_sprite_2d.play("chopping_front")
+		hit_component_collision_shape.position = Vector2(-2, 2)
 	
 	else: 
 		animated_sprite_2d.play("chopping_front") # similar code as the idle and walk animations
+		
+	hit_component_collision_shape.disabled = false
 
 
 func _on_exit() -> void: # this makes sure chopping stops when we move back to idle 
 	animated_sprite_2d.stop() 
+	hit_component_collision_shape.disabled = true 
 	
 # also go into AnimatedSprite2D and into the SpriteFrames tab. looping should be turned off for all the chopping_ 
 #ones because we only want to play the chopping animation once 
