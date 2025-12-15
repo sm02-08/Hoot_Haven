@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://3gxgxuy8fys" path="res://scenes/characters/player/player.tscn" id="2_d5vrm"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kwegh"]
-vertices = PackedVector2Array(354.297, 116.648, 396.352, 194.477, 363.617, 244.031, 311.938, 282.789, 224.617, 277.391, 189.617, 200.211, 208.141, 135.852, 304.383, 104.391)
+vertices = PackedVector2Array(414.547, 107.68, 419.75, 196.102, 366.617, 249.227, 335.719, 259.219, 223.977, 275.977, 189.617, 200.211, 208.141, 135.852, 305.43, 104.039)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(200, 128, 304, 94, 361, 108, 408, 195, 371, 251, 315, 293, 218, 287, 179, 201)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(200, 128, 304, 94, 424, 98, 430, 200, 372, 258, 338, 269, 218, 287, 179, 201)])
 
 [node name="TestSceneNPCChicken" type="Node2D"]
 y_sort_enabled = true
@@ -48,4 +48,19 @@ position = Vector2(154, 188)
 navigation_polygon = SubResource("NavigationPolygon_kwegh")
 
 [node name="Chicken" parent="Chickens" instance=ExtResource("2_4x00b")]
-position = Vector2(263, 150)
+position = Vector2(247, 186)
+
+[node name="Chicken2" parent="Chickens" instance=ExtResource("2_4x00b")]
+position = Vector2(307, 146)
+
+[node name="Chicken3" parent="Chickens" instance=ExtResource("2_4x00b")]
+position = Vector2(242, 230)
+
+[node name="Chicken4" parent="Chickens" instance=ExtResource("2_4x00b")]
+position = Vector2(262, 158)
+
+[node name="Chicken5" parent="Chickens" instance=ExtResource("2_4x00b")]
+position = Vector2(287, 209)
+
+[node name="Chicken6" parent="Chickens" instance=ExtResource("2_4x00b")]
+position = Vector2(314, 177)

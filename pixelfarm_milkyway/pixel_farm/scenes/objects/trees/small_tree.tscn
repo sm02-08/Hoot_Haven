@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dm2wprqqfhnka"]
 
-[ext_resource type="Texture2D" uid="uid://clxoydc1gottw" path="res://assets/spritepack/Objects/basic_grass_biome.png" id="1_bwq7f"]
+[ext_resource type="Texture2D" uid="uid://clxoydc1gottw" path="res://assets/game/Objects/basic_grass_biome.png" id="1_bwq7f"]
 [ext_resource type="Shader" path="res://scenes/objects/shake.gdshader" id="1_ppj3w"]
 [ext_resource type="PackedScene" uid="uid://dnm1qilvpevm3" path="res://scenes/components/hurt_component.tscn" id="2_div7p"]
 [ext_resource type="Script" path="res://scenes/objects/trees/small_tree.gd" id="2_y1477"]
@@ -23,7 +23,6 @@ radius = 4.0
 size = Vector2(10, 22)
 
 [node name="SmallTree" type="Sprite2D"]
-y_sort_enabled = true
 material = SubResource("ShaderMaterial_ti6y2")
 texture = SubResource("AtlasTexture_j1np0")
 offset = Vector2(0, -9)

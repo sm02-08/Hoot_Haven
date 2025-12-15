@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cte4ith67a3nd"]
 
-[ext_resource type="Texture2D" uid="uid://clxoydc1gottw" path="res://assets/spritepack/Objects/basic_grass_biome.png" id="1_gvri0"]
+[ext_resource type="Texture2D" uid="uid://clxoydc1gottw" path="res://assets/game/Objects/basic_grass_biome.png" id="1_gvri0"]
 [ext_resource type="PackedScene" uid="uid://bfa2totsyqbb0" path="res://scenes/components/collectible_component.tscn" id="2_ei1go"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq26p"]

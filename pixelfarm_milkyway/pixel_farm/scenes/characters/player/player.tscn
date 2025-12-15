@@ -1,8 +1,8 @@
 [gd_scene load_steps=54 format=3 uid="uid://3gxgxuy8fys"]
 
-[ext_resource type="Texture2D" uid="uid://biagkbkkdba1y" path="res://assets/spritepack/Characters/basic_character_actions.png" id="1_5u2yx"]
+[ext_resource type="Texture2D" uid="uid://biagkbkkdba1y" path="res://assets/game/Characters/basic_character_actions.png" id="1_5u2yx"]
 [ext_resource type="Script" path="res://scenes/characters/player/player.gd" id="1_fj27y"]
-[ext_resource type="Texture2D" uid="uid://d1o4w4p8kps2h" path="res://assets/spritepack/Characters/basic_character_spritesheet.png" id="2_exlt2"]
+[ext_resource type="Texture2D" uid="uid://d1o4w4p8kps2h" path="res://assets/game/Characters/basic_character_spritesheet.png" id="2_exlt2"]
 [ext_resource type="Script" path="res://scripts/state_machine/node_state_machine.gd" id="3_08nha"]
 [ext_resource type="Script" path="res://scenes/characters/player/idle_state.gd" id="4_h0iyx"]
 [ext_resource type="Script" path="res://scenes/characters/player/walk_state.gd" id="5_rnn04"]
