@@ -8,14 +8,15 @@ atlas = ExtResource("1_gvri0")
 region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mupew"]
-radius = 4.0
+radius = 5.0
 
 [node name="Log" type="Sprite2D"]
 texture = SubResource("AtlasTexture_dq26p")
 
 [node name="CollectibleComponent" parent="." instance=ExtResource("2_ei1go")]
-collectable_name = "log"
+collectible_name = "log"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent"]
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_mupew")
 debug_color = Color(0.271733, 0.626505, 0.256592, 0.42)

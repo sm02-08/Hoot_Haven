@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	if current_node_state:
 		current_node_state._on_physics_process(delta)
 		current_node_state._on_next_transitions()
-		print(parent_node_name, " Current State: ", current_node_state_name) # always print out the current state for easier access
+		#print(parent_node_name, " Current State: ", current_node_state_name) # always print out the current state for easier access
 		# so basically it'll say "Player Current State: " or "Chicken Current State: " instead of just
 		# Current State, so that way, we'll know which thing we're currently debugging 
 
