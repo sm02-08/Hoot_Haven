@@ -39,7 +39,8 @@ func _on_enter() -> void: # only play the animation as you enter the state
 	
 	else: 
 		animated_sprite_2d.play("watering_front") # similar code as the idle and walk animations
-
+		
+	hit_component_collision_shape.disabled = false
 
 func _on_exit() -> void: # this makes sure tilling stops when we move back to idle 
 	animated_sprite_2d.stop() 

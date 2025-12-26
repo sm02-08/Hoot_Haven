@@ -1,9 +1,11 @@
+# copied from corn.gd
+
 extends Node2D
 
-var corn_harvest_scene = preload("res://scenes/objects/plants/corn_harvest.tscn")
-# created the corn harvest scene as a collectible previously
+var tomato_harvest_scene = preload("res://scenes/objects/plants/tomato_harvest.tscn")
+# created the tomato harvest scene as a collectible previously
 
-# click and drag + ctrl everything in the corn scene 
+# click and drag + ctrl everything in the tomato scene 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var watering_particles: GPUParticles2D = $WateringParticles
 @onready var flowering_particles: GPUParticles2D = $FloweringParticles
@@ -51,7 +53,7 @@ func on_crop_maturity() -> void:
 func on_crop_harvesting() -> void: # there was a bad edit in the tutorial
 	# so this part isn't in the tutorial but it's from their github 
 	# https://github.com/rapidvectors/tutorial-components-and-scripts/blob/main/tutorials/croptails/scripts/scenes/objects/plants/corn.gd
-	var corn_harvest_instance = corn_harvest_scene.instantiate() as Node2D
-	corn_harvest_instance.global_position = global_position
-	get_parent().add_child(corn_harvest_instance)
+	var tomato_harvest_instance = tomato_harvest_scene.instantiate() as Node2D
+	tomato_harvest_instance.global_position = global_position
+	get_parent().add_child(tomato_harvest_instance)
 	queue_free()

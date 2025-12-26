@@ -11,7 +11,7 @@ var initial_hour: int = 12
 var initial_minute: int = 30 
 
 var time: float = 0.0 # time is the time duration from beginning 
-var current_minute: int = -1 
+var current_minute: int = 0
 var current_day: int = 0 
 
 signal game_time(time: float) # signals game time, pass in time 

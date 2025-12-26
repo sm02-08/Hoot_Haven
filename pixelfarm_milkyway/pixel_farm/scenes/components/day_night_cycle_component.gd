@@ -1,19 +1,20 @@
 class_name DayNightCycleComponent
 extends CanvasModulate
 
-@export var initial_day: int = -14: # if i set int = 0, it starts at day 15 for some reason?? this way it starts a day 1
-	set(id): 
+@export var initial_day: int = 0: # if i set int = 0, it starts at day 15 for some reason?? this way it starts a day 1
+	# ^ fixed apparently just set the initial day, hour, minute, and second to 0 too and it'll be fixed 
+	set(id): # id = initial day, ih = initial hour, im = initial minute
 		initial_day = id
 		DayNightCycleManager.initial_day = id 
 		DayNightCycleManager.set_initial_time() 
 		
-@export var initial_hour: int = 12: 
+@export var initial_hour: int = 0: 
 	set(ih): 
 		initial_hour = ih 
 		DayNightCycleManager.initial_hour = ih 
 		DayNightCycleManager.set_initial_time() 
 		
-@export var initial_minute: int = 30: 
+@export var initial_minute: int = 0: 
 	set(im): 
 		initial_minute = im 
 		DayNightCycleManager.initial_minute = im 

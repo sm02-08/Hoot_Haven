@@ -12,6 +12,7 @@ func _on_process(_delta : float) -> void:
 	pass
 
 
+
 func _on_physics_process(_delta : float) -> void:
 	pass
 
@@ -39,7 +40,6 @@ func _on_enter() -> void: # only play the animation as you enter the state
 		animated_sprite_2d.play("chopping_front") # similar code as the idle and walk animations
 		
 	hit_component_collision_shape.disabled = false
-
 
 func _on_exit() -> void: # this makes sure chopping stops when we move back to idle 
 	animated_sprite_2d.stop() 

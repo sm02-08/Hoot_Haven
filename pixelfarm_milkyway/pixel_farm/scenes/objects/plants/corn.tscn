@@ -21,9 +21,9 @@ vframes = 2
 frame = 1
 
 [node name="WateringParticles" parent="." instance=ExtResource("2_iejtr")]
-visible = false
 
 [node name="FloweringParticles" parent="." instance=ExtResource("3_r6edm")]
+visible = true
 
 [node name="GrowthCycleComponent" parent="." instance=ExtResource("5_6ys04")]
 
@@ -32,6 +32,7 @@ position = Vector2(0, -4)
 tool = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+y_sort_enabled = true
 position = Vector2(0, 3)
 scale = Vector2(0.96, 1)
 shape = SubResource("RectangleShape2D_hc67p")

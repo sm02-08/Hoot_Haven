@@ -10,7 +10,7 @@ signal crop_maturity
 signal crop_harvesting 
 # there are signals for crop maturity and harvesting 
 
-var is_watered: bool 
+var is_watered: bool # new variables
 var starting_day: int 
 var current_day: int 
 
@@ -28,8 +28,8 @@ func on_time_tick_day(day: int) -> void:
 		if starting_day == 0: 
 			starting_day = day
 			
-	growth_states(starting_day, day)
-	harvest_state(starting_day, day)
+		growth_states(starting_day, day)
+		harvest_state(starting_day, day)
 	# continuation of _ready: 
 	# when the crop is watered, then the growth cycle component will start to go through
 	# the growth state
@@ -42,12 +42,13 @@ func on_time_tick_day(day: int) -> void:
 # BUT the growth state is fixed because of the NUMBER OF frames on the sprite
 # but the harvest day can be several days later to give some variation 
 # u want crops with different harvest days 
+
 func growth_states(starting_day: int, current_day: int): 
 	if current_growth_state == DataTypes.GrowthStates.Maturity: 
 		return 
 # basically, when the growth states are being traversed -- once we get to the maturity state, 
 # we want to come out of the method
-
+	
 	var num_states = 5 
 	
 	# check the data_types.gd to see the number of states: 
@@ -60,7 +61,7 @@ func growth_states(starting_day: int, current_day: int):
 		Maturity,
 		Harvesting
 	}
-
+	
 	so there's 5 states, minus harvesting
 	"""
 	var growth_days_passed = (current_day - starting_day) % num_states 
@@ -78,6 +79,7 @@ func growth_states(starting_day: int, current_day: int):
 func harvest_state(starting_day: int, current_day: int) -> void: # pass in again the starting day and current day
 	if current_growth_state == DataTypes.GrowthStates.Harvesting: 
 		return
+	
 	var days_passed = (current_day - starting_day) % days_until_harvest
 	# days until harvest is defined in @export_range 
 	
