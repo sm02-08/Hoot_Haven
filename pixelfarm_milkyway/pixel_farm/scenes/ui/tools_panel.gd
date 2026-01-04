@@ -8,10 +8,38 @@ extends PanelContainer
 
 
 ## Called when the node enters the scene tree for the first time.
-#func _ready():
-	#pass # Replace with function body.
+func _ready(): # when the player first loads in, the tool panels must be disabled 
+	ToolManager.enable_tool.connect(on_enable_tool_button)
+	
+	# only after the user interacts with the guides, should the tools be enabled
+	tool_tilling.disabled = true 
+	tool_tilling.focus_mode = Control.FOCUS_NONE 
+	
+	tool_watering_can.disabled = true 
+	tool_watering_can.focus_mode = Control.FOCUS_NONE 
+	
+	tool_corn.disabled = true 
+	tool_corn.focus_mode = Control.FOCUS_NONE 
+	
+	tool_tomato.disabled = true 
+	tool_tomato.focus_mode = Control.FOCUS_NONE 
 #
-#
+
+func on_enable_tool_button(tool: DataTypes.Tools) -> void: 
+	# the tool taskbar has to be disabled before it's... enabled lol after the dialogue passes 
+	if tool == DataTypes.Tools.TillGround: 
+		tool_tilling.disabled = false 
+		tool_tilling.focus_mode = Control.FOCUS_ALL
+	elif tool == DataTypes.Tools.WaterCrops: 
+		tool_watering_can.disabled = false 
+		tool_watering_can.focus_mode = Control.FOCUS_ALL 
+	elif tool == DataTypes.Tools.PlantCorn: 
+		tool_corn.disabled = false 
+		tool_corn.focus_mode = Control.FOCUS_ALL 
+	elif tool == DataTypes.Tools.PlantTomato: 
+		tool_tomato.disabled = false 
+		tool_tomato.focus_mode = Control.FOCUS_ALL 
+
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#pass

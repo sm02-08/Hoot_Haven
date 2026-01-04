@@ -14,6 +14,8 @@ func _ready() -> void:
 	interactable_component.interactable_deactivated.connect(on_interactable_deactivated)
 	interactable_label_component.hide() 
 	
+	GameDialogueManager.give_crop_seeds.connect(on_give_crop_seeds)
+	
 func on_interactable_activated() -> void:
 	interactable_label_component.show()
 	in_range = true 
@@ -29,3 +31,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_tree().current_scene.add_child(balloon) 
 			balloon.start(load("res://dialogue/conversations/guide.dialogue"), "start")
 		 
+func on_give_crop_seeds() -> void: 
+	ToolManager.enable_tool_button(DataTypes.Tools.TillGround) # grab the tool manager and enable tool button, and then pass in all your tools
+	ToolManager.enable_tool_button(DataTypes.Tools.WaterCrops)
+	ToolManager.enable_tool_button(DataTypes.Tools.PlantCorn)
+	ToolManager.enable_tool_button(DataTypes.Tools.PlantTomato)
