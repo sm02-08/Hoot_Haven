@@ -40,6 +40,9 @@ func on_enable_tool_button(tool: DataTypes.Tools) -> void:
 		tool_tomato.disabled = false 
 		tool_tomato.focus_mode = Control.FOCUS_ALL 
 
+# THERE'S AN ISSUE WITH THIS THOUGH -- if you're trying to test other scenes (e.g. tilled dirt scene), your tools will be DISABLED AND THERE'S NO WAY TO FIX THEM 
+# so there needs to be some type of way to enable the tools within testing scenes 
+
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#pass

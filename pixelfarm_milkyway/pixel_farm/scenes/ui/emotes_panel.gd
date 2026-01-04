@@ -5,6 +5,8 @@ extends Panel
 
 var idle_emotes: Array = ["emote_1_idle", "emote_2_smile", "emote_3_ear_wave", "emote_4_blink"] # these are 4 emotes from the animated sprite 2D spritesheet -- in there, we have 6 animations in total 
 
+
+
 func _ready() -> void: # overriden ready method
 	animated_sprite_2d.play("emote_1_idle") # start with default emote: idle
 
