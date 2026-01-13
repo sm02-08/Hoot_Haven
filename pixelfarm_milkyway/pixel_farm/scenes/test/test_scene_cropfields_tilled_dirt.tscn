@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dgahh7n8o5la4"]
+[gd_scene load_steps=14 format=4 uid="uid://dgahh7n8o5la4"]
 
 [ext_resource type="PackedScene" uid="uid://ccet5knni8ogm" path="res://scenes/components/day_night_cycle_component.tscn" id="1_jo83y"]
 [ext_resource type="TileSet" uid="uid://choitg3fo6yi2" path="res://tilesets/game_tile_set.tres" id="2_4lqpu"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://b18iymyrnm71c" path="res://scenes/components/save_data_component.tscn" id="6_w5a02"]
 [ext_resource type="Resource" uid="uid://kklqkuyq3bhp" path="res://resources/tilemap_layer_data_resource.tres" id="7_fpm5f"]
 [ext_resource type="PackedScene" uid="uid://b4pwkvuo2fcty" path="res://scenes/components/save_level_data_component.tscn" id="9_majbt"]
-[ext_resource type="Script" path="res://scenes/components/save_level_data_component.gd" id="10_ek45h"]
 [ext_resource type="PackedScene" uid="uid://dnoeiygvv6ii8" path="res://scenes/components/test_scene_save_data_manager_component.tscn" id="11_yooii"]
 
 [node name="TestSceneCropfieldsTilledDirt" type="Node2D"]
@@ -22,7 +21,6 @@
 [node name="TestSceneEnableTools" parent="." instance=ExtResource("2_kfpg7")]
 
 [node name="SaveLevelDataComponent" parent="." instance=ExtResource("9_majbt")]
-script = ExtResource("10_ek45h")
 
 [node name="DayNightCycleComponent" parent="." instance=ExtResource("1_jo83y")]
 visible = false
@@ -52,7 +50,6 @@ save_data_resource = ExtResource("7_fpm5f")
 script = ExtResource("4_on4gm")
 grass_tilemap_layer = NodePath("../GameTileMap/Grass")
 tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledSoil")
-terrain = 3
 
 [node name="CropsCursorComponent" parent="." node_paths=PackedStringArray("tilled_soil_tilemap_layer") instance=ExtResource("5_qnxc7")]
 script = ExtResource("6_axcly")

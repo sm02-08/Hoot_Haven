@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://obcrey4h8dwf"]
+[gd_scene load_steps=8 format=4 uid="uid://obcrey4h8dwf"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_menu_screen_background.gd" id="1_i3jdh"]
 [ext_resource type="TileSet" uid="uid://choitg3fo6yi2" path="res://tilesets/game_tile_set.tres" id="2_yjvev"]
@@ -6,12 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://e7uo7ctorsvj" path="res://scenes/characters/guide/guide.tscn" id="4_i8u3g"]
 [ext_resource type="PackedScene" uid="uid://cyd07sdd712da" path="res://scenes/characters/cow/cow.tscn" id="5_q01t5"]
 [ext_resource type="PackedScene" uid="uid://beaot5epqfehn" path="res://scenes/characters/chicken/chicken.tscn" id="6_e2c32"]
+[ext_resource type="Texture2D" uid="uid://bgcjf86fb2jwn" path="res://assets/hoothaven2.png" id="7_bfoj8"]
 
 [node name="GameMenuScreenBackground" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_i3jdh")
 
 [node name="GameTileMap" type="Node2D" parent="."]
+visible = false
 y_sort_enabled = true
 
 [node name="Water" type="TileMapLayer" parent="GameTileMap"]
@@ -26,16 +28,19 @@ tile_map_data = PackedByteArray("AAAhABIAAQACAAIAAAAhABEAAQAFAAEAAAAhABAAAQABAAE
 tile_set = ExtResource("2_yjvev")
 
 [node name="Objects" type="TileMapLayer" parent="GameTileMap"]
+visible = false
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAIAAIABQABAAAAAAAIAAMABQAAAAEAAAAIAAQABQAAAAEAAAAIAAUABQAAAAEAAAAIAAYABQAAAAEAAAAIAAcABQABAAMAAAAJAAIABQACAAIAAAAKAAIABQACAAIAAAALAAIABQACAAMAAAAMAAIABQACAAAAAAANAAIABQACAAIAAAAOAAIABQACAAIAAAAPAAIABQACAAMAAAAQAAIABQADAAAAAAAQAAMABQAAAAEAAAAQAAQABQAAAAEAAAAQAAUABQAAAAEAAAAQAAYABQAAAAEAAAAQAAcABQADAAMAAAAPAAcABQACAAMAAAAOAAcABQABAAIAAAAJAAcABQACAAIAAAAKAAcABQADAAMAAAAMAAUABQAAAAIAAAAMAAQABQAAAAEAAAAMAAMABQAAAAEAAAAJAA8ABQADAAIAAAAIAA8ABQACAAIAAAAHAA8ABQACAAIAAAAGAA8ABQACAAIAAAAFAA8ABQACAAIAAAAEAA8ABQABAAAAAAAEABAABQAAAAEAAAAEABEABQAAAAEAAAAEABIABQAAAAEAAAAEABMABQABAAIAAAAFABMABQACAAMAAAAGABMABQACAAIAAAAHABMABQACAAMAAAAIABMABQACAAMAAAAJABMABQACAAIAAAAKABMABQADAAEAAAAKABQABQAAAAEAAAAKABUABQABAAMAAAALABUABQACAAIAAAAMABUABQACAAIAAAANABUABQACAAIAAAAOABUABQADAAMAAAAOABQABQAAAAEAAAAOABMABQAAAAEAAAAOABIABQAAAAEAAAAOABEABQAAAAEAAAAOABAABQAAAAEAAAAOAA8ABQADAAAAAAANAA8ABQABAAMAAAAKABEABQAAAAAAAAAKABIABQAAAAEAAAARAAwABAAAAAAAAwAcAA8ABAAAAAAAAgA=")
 tile_set = ExtResource("2_yjvev")
 
 [node name="Undergrowth" type="TileMapLayer" parent="GameTileMap"]
+visible = false
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAHAAQAAwAGAAEAAAAGAAQAAwAGAAEAAAAGAAUAAwAGAAEAAAAFAAUAAwAGAAEAAAAEAAYAAwAGAAEAAAAPAA4AAwAGAAEAAAAOAA4AAwAGAAEAAAAJAA0AAwAGAAEAAAAIAA4AAwAGAAEAAAAaABIAAwAGAAEAAAAcABEAAwAFAAAAAAAcABIAAwAFAAEAAAAZABIAAwAFAAAAAAAZABMAAwAFAAEAAAAZABUAAwAFAAAAAAAZABYAAwAFAAEAAAAFAAgAAwAFAAEAAAAGAAYAAwAFAAEAAAAZAAUAAwAFAAEAAAAaAAUAAwAFAAEAAAAaAAYAAwAFAAEAAAAaAAcAAwAFAAEAAAAbAAgAAwAFAAEAAAAaAAkAAwAFAAEAAAAYAAsAAwAFAAEAAAAfABAAAwAHAAIAAAAeABAAAwAHAAIAAAAaAAwAAwAHAAIAAAASAAYAAwAHAAIAAAASAAgAAwAHAAIAAAARAAcAAwAHAAAAAAAHAAUAAwAHAAAAAAAIAAEAAwAHAAAAAAAHAAMAAwAHAAAAAAATABEAAwAHAAAAAAAUABQAAwAHAAMAAAATABcAAwAHAAMAAAAUABcAAwAHAAMAAAAdAA4AAwAHAAMAAAAkAA4AAwAHAAMAAAATAAsAAwAHAAMAAAAZAAkAAwAHAAMAAAAPAAgAAwAHAAMAAAAHAAcAAwAHAAMAAAAPABEAAwAFAAMAAAADABEAAwAFAAMAAAAHAA4AAwAFAAMAAAAIAA0AAwAFAAMAAAANAA0AAwAFAAMAAAAeABQAAwAFAAMAAAAdABcAAwAFAAMAAAAgAAYAAwAGAAMAAAAcAAUAAwAGAAMAAAAUABIAAwAGAAAAAAAkAA8AAwAGAAAAAAAEAAoAAwAGAAAAAAAIAAgAAwAGAAAAAAAYAA0AAwAGAAEAAAAaAA4AAwAGAAEAAAAJAAEAAwAFAAAAAAASAAoAAwAFAAAAAAAKABYAAwAFAAAAAAA=")
 tile_set = ExtResource("2_yjvev")
 
 [node name="Overgrowth" type="TileMapLayer" parent="GameTileMap"]
+visible = false
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAgAAwAIAAIAAAARAAUAAwAIAAIAAAAbAAsAAwAIAAIAAAAeABcAAwAIAAIAAAAPABUAAwAIAAIAAAAHAAYABAAAAAAABQARAAMABAAAAAAABQAZAAgABAAAAAAABQASAAkABAAAAAAABQAQAAkABAAAAAAABQAbAA8ABAAAAAAABQAeABIABAAAAAAABAAeAAYABAAAAAAABAAbAAcABAAAAAAABAAHAAwABAAAAAAABAAFAAoABAAAAAAABAAQABEABAAAAAAABAAZAAsABAAAAAAABAAdABUABAAAAAAABAAWABQABAAAAAAABAAUABAAAwADAAAAAAARAAsAAwADAAAAAAAbABcAAwADAAAAAAAlAA8AAwADAAAAAAAEABMAAwADAAAAAAAEAAQAAwADAAAAAAA=")
 tile_set = ExtResource("2_yjvev")
@@ -46,49 +51,66 @@ tile_set = ExtResource("2_yjvev")
 position = Vector2(360, 207)
 
 [node name="Guide" parent="Characters" instance=ExtResource("4_i8u3g")]
+visible = false
 position = Vector2(327, 209)
 
 [node name="Cow" parent="." instance=ExtResource("5_q01t5")]
+visible = false
 position = Vector2(162, 71)
 
 [node name="AnimatedSprite2D" parent="Cow" index="0"]
 flip_h = true
 
 [node name="Cow2" parent="." instance=ExtResource("5_q01t5")]
+visible = false
 position = Vector2(180, 101)
 
 [node name="Cow3" parent="." instance=ExtResource("5_q01t5")]
+visible = false
 position = Vector2(237, 67)
 
 [node name="Cow4" parent="." instance=ExtResource("5_q01t5")]
+visible = false
 position = Vector2(239, 104)
 
 [node name="AnimatedSprite2D" parent="Cow4" index="0"]
 flip_h = true
 
 [node name="Chicken" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(100, 270)
 
 [node name="AnimatedSprite2D" parent="Chicken" index="0"]
 flip_h = true
 
 [node name="Chicken2" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(114, 291)
 
 [node name="Chicken3" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(141, 270)
 
 [node name="Chicken4" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(152, 294)
 
 [node name="Chicken5" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(206, 270)
 
 [node name="Chicken6" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(188, 325)
 
 [node name="Chicken7" parent="." instance=ExtResource("6_e2c32")]
+visible = false
 position = Vector2(208, 297)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 202)
+scale = Vector2(1.3375, 1.27222)
+texture = ExtResource("7_bfoj8")
 
 [editable path="Cow"]
 [editable path="Cow4"]
