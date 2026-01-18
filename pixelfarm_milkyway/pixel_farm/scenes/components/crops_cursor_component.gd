@@ -58,7 +58,7 @@ func get_cell_under_mouse() -> void:
 	print("Distance: ", distance)
 
 func add_crop() -> void: 
-	if distance < 20.0: 
+	if distance < 25.0: 
 		if has_crop_in_dirt(): # check: if there's already crops in that area, then don't plant anything
 			return 
 		
@@ -74,7 +74,7 @@ func add_crop() -> void:
 			get_parent().find_child("Cropfields").add_child(tomato_instance) # get parent, find child, and add child to the Cropfields node in the TestSceneCropfieldsTilledDirt scene 
 
 func remove_crop() -> void: 
-	if distance < 20.0: 
+	if distance < 25.0: 
 		var crop_nodes = get_parent().find_child("Cropfields").get_children()
 		# if the distance is less than 20, get all the crop nodes from the Cropfields node 
 		

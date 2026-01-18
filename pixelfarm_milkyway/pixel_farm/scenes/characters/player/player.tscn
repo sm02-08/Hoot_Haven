@@ -408,8 +408,9 @@ script = ExtResource("1_fj27y")
 position = Vector2(1, -3)
 scale = Vector2(0.314168, 0.314168)
 sprite_frames = SubResource("SpriteFrames_qx251")
-animation = &"tilling_front"
+animation = &"idle_front"
 autoplay = "idle_front"
+frame_progress = 0.892133
 offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

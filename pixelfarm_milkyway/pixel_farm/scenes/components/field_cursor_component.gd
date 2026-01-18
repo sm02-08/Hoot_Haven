@@ -59,13 +59,13 @@ func get_cell_under_mouse() -> void:
 	
 # call another function to connect the terrain 
 func add_tilled_soil_cell() -> void: 
-	if distance < 20.0 && cell_source_id != -1: # if dist is less than 20 pixels 
+	if distance < 25.0 && cell_source_id != -1: # if dist is less than 20 pixels 
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, terrain, true)
 		# basically, if the distance is less than 20 from the mouse click, and the terrain is grass, 
 		# then the terrain will be tilled 
 
 func remove_tilled_soil_cell() -> void: 
-	if distance < 20.0: 
+	if distance < 25.0: 
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], 0, -1, true)
 		# this sets the "terrain set" to 0 and sets "terrain" to -1 (grass) 
 

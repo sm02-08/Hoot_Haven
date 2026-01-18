@@ -60,14 +60,15 @@ animations = [{
 radius = 8.0
 
 [node name="Cow" type="CharacterBody2D"]
+position = Vector2(0, -2)
 collision_layer = 64
 script = ExtResource("1_1uc7y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_rfghv")
 animation = &"idle"
 autoplay = "idle"
+offset = Vector2(0, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -8)

@@ -1,18 +1,32 @@
 ~ start 
-Niklas: [[Hi|Hello|Howdy|Hey partner]], nice to meet you. 
-# use hashtags to comment 
-# the hi|hello|howdy means that every time, one of the three options will be 
-# chosen so the dialogue doesn't get repetitive
-Niklas: Welcome to your new farm! Your cows and chickens are hungry--you need to feed them!
-Niklas: I've got just the thing. Here, take some seeds. 
-Niklas: You'll have to plant them to grow crops, and you'll be able to feed the crops to your livestock.
-Niklas: Use the tilling tool to create tilled land, plant your seeds, and use the watering can to water them.
-Niklas: Press RMB (right mouse button) to disable your tools. 
-- Take crop seeds
-	You: Thanks for the seeds! 
-	do GameDialogueManager.action_give_crop_seeds() # this calls the method on game_dialogue_manager.gd
-	# the action_give_crop_seeds() method. only if the player chooses the "take crop seeds" option
-- No, I don't want them.
-	You: I'm not ready to grow my farm yet, but thank you for the information! 
-- I'd like to hear this information again. => start 
+if SceneManager.is_on_level("Level1")
+	Niklas: [[Hi|Hello|Howdy|Hey partner]], nice to meet you. 
+	# use hashtags to comment 
+	# the hi|hello|howdy means that every time, one of the three options will be 
+	# chosen so the dialogue doesn't get repetitive
+	Niklas: Welcome to your new farm! Your cows and chickens are hungry--you need to feed them!
+	Niklas: I've got just the thing. Here, take some seeds. 
+	Niklas: You'll have to plant them to grow crops, and you'll be able to feed the crops to your livestock.
+	Niklas: Use the tilling tool to create tilled land, plant your seeds, and use the watering can to water them.
+	Niklas: Press RMB (right mouse button) to disable your tools. 
+	- Take crop seeds
+		You: Thanks for the seeds! 
+		do GameDialogueManager.action_give_crop_seeds() # this calls the method on game_dialogue_manager.gd
+		# the action_give_crop_seeds() method. only if the player chooses the "take crop seeds" option
+	- No, I don't want them.
+		You: I'm not ready to grow my farm yet, but thank you for the information! 
+	- I'd like to hear this information again. => start 
+	
+if SceneManager.is_on_level("Level2")
+	Niklas: [[Hi|Hello|Howdy|Hey partner]], great to see you again! 
+	Niklas: Congratulations on making it to level 2! 
+	Niklas: You've grasped all the basics. Let me know if you want a refresher on the game mechanics!
+	- How do I grow crops? 
+		Niklas: Use your tilling tool to till a fresh patch of grass, plant your crops on the tilled soil, and water them! 
+		Niklas: Bonus tip: speed up the day's progression so that your crops grow faster!
+	- How do I axe trees or mine rocks? 
+		Niklas: Take your axe tool and swing it at a rock or tree! 
+	- How do I feed my animals? 
+		Niklas: Once you have some corn and tomato in your inventory, go to a chest and press "E."
+	- I don't need anything. Goodbye for now! 
 => END 
