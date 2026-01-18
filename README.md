@@ -1,4 +1,4 @@
-# Your Very Own Pixel Farm!
+# Hoot Haven
 Welcome! This is a pixel farming game -- not a stardew valley copy, notably. You play as an owl (my favorite animal) and have access to a map where you have the ability to do different activities, including but not limited to: 
 - Farming (obviously)
 - Cutting down trees
